@@ -16,7 +16,7 @@ function start() {
     ctx = cnv.getContext("2d");
     cnv.style.backgroundColor = "rgba(0, 0, 0)";
     setup();
-    setInterval(draw, 1000 / 50);
+    window.requestAnimationFrame(draw)
 }
 
 function setup() {
@@ -74,4 +74,5 @@ function draw() {
         planets[i].update();
 
     }
+    requestAnimationFrame(draw);
 }
